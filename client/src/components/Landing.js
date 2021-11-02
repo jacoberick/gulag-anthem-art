@@ -107,12 +107,12 @@ const Landing = () => {
           </svg>
         </div>
         <div id="right" className="w-1/2 flex flex-col items-center">
-          <h1 className="text-center text-7xl font-jSans leading-snug">
-            Welcome to the works of Gulag Anthem.
+          <h1 className="text-center text-5xl font-jSans leading-snug px-4">
+            Welcome to GULAG ANTHEM.
           </h1>
           <button
             onClick={() => setActive(false)}
-            className="border-2 border-black py-4 px-8 mt-8 rounded-md hover:bg-black transition hover:text-white font-zen"
+            className="border-2 border-black py-3 px-6 mt-6 rounded-md hover:bg-black transition hover:text-white font-zen"
           >
             Enter Site
           </button>
