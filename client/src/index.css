@@ -4,3 +4,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Zen+Antique+Soft&display=swap");
+
+#openSeaIcon:hover {
+  fill: #ef4444;
+}
