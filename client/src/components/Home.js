@@ -1,15 +1,10 @@
 import { useState } from "react";
 
-const Landing = () => {
-  const [active, setActive] = useState(true);
-
+const Home = () => {
   return (
-    <div
-      id="landingMasterContainer"
-      className={`${active ? "block" : "hidden"} bg-trainPink overflow-hidden`}
-    >
-      <div id="inner" className="h-screen mx-auto flex items-center px-12">
-        <div id="left" className="w-1/2 mr-5">
+    <div id="landingMasterContainer" className="max-w-7xl mx-auto px-24">
+      <div id="inner" className="mx-auto flex">
+        <div id="left" className="w-1/2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
             <g>
               <path
@@ -106,20 +101,22 @@ const Landing = () => {
             </g>
           </svg>
         </div>
-        <div id="right" className="w-1/2 flex flex-col items-center">
-          <h1 className="text-center text-5xl font-jSans leading-snug px-4">
-            Welcome to GULAG ANTHEM.
+        <div
+          id="right"
+          className="w-1/2 flex justify-center items-center bg-trainPink"
+        >
+          <h1 className="text-3xl font-jSans leading-snug px-4 uppercase text-black">
+            gulag anthem
           </h1>
-          <button
-            onClick={() => setActive(false)}
-            className="border-2 border-black py-3 px-6 mt-6 rounded-md hover:bg-black transition hover:text-white font-zen"
-          >
-            Enter Site
-          </button>
+          <div>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Landing;
+export default Home;

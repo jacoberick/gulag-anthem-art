@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       colors: {
         trainPink: "#ffd7f5",
+        main: "#0C5D4A",
+        black: "#121212",
       },
       fontFamily: {
         jSans: ["Josefin Sans", "sans-serif"],
