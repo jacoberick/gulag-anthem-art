@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const iconClass = "hover:text-red-500 transition";
+const iconClass = "hover:text-trainBlue transition";
 
 const Home = () => {
   return (
@@ -468,14 +468,17 @@ const Home = () => {
           <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white">
             gulag anthem
           </h1>
+          <h2 className="font-zen uppercase text-white mb-3 text-lg">
+            digital art
+          </h2>
           <div id="iconLinks" className="text-2xl text-white">
-            <a href="">
+            <a href="https://www.instagram.com/gulaganthem/">
               <FontAwesomeIcon className={iconClass} icon={faInstagram} />
             </a>
-            <a className="mx-6" href="">
+            <a className="mx-6" href="https://twitter.com/gulaganthem">
               <FontAwesomeIcon className={iconClass} icon={faTwitter} />
             </a>
-            <a href="">
+            <a href="https://opensea.io/gulaganthem">
               <svg
                 id="openSeaIcon"
                 className="inline-block h-6 mb-1 fill-current"

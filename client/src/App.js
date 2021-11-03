@@ -3,7 +3,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div id="masterContainer" className=" h-screen">
+    <div id="masterContainer" className="bg-white h-screen">
       <Header />
       <Home />
     </div>
