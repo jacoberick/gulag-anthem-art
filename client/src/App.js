@@ -4,7 +4,7 @@ import Art from "./components/Art";
 
 function App() {
   return (
-    <div id="masterContainer" className="bg-white h-screen">
+    <div id="masterContainer" className="bg-white">
       <Header />
       <Home />
       <Art />

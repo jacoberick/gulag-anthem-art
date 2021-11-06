@@ -8,7 +8,7 @@ const Header = () => {
           <a className={linkClass} href="/">
             art
           </a>
-          <a className={`${linkClass} mx-8`} href="/">
+          <a className={`${linkClass} mx-12`} href="/">
             shop
           </a>
           <a className={linkClass} href="/">

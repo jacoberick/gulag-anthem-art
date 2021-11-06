@@ -17,6 +17,7 @@ recordRoutes.route("/record").get(function (req, res) {
   db_connect
     .collection("jpgs")
     .find({})
+    .sort({ _id: -1 })
     .toArray(function (err, result) {
       if (err) throw err;
       res.json(result);

@@ -6,7 +6,7 @@ const iconClass = "hover:text-trainBlue transition";
 const Home = () => {
   return (
     <div id="landingContainer" className="max-w-7xl mx-auto px-12">
-      <div id="inner" className="mx-auto flex">
+      <div id="inner" className="flex">
         <div id="left" className="w-1/2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
             <g>

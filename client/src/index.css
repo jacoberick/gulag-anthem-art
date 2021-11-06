@@ -8,3 +8,9 @@
 #openSeaIcon:hover {
   fill: #004c91;
 }
+
+@layer base {
+  h1 {
+    @apply font-jSans;
+  }
+}
