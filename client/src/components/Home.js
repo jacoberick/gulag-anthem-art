@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Art from "./Art";
 
 const iconClass = "hover:text-trainBlue transition";
 
 const Home = () => {
   return (
-    <div id="landingContainer" className="max-w-7xl mx-auto px-12">
-      <div id="inner" className="flex">
+    <div id="homeContainer" className="">
+      <div id="home" className="flex max-w-screen-2xl mx-auto px-14">
         <div id="left" className="w-1/2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
             <g>
@@ -490,6 +491,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Art />
     </div>
   );
 };

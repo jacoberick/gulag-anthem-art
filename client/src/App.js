@@ -1,14 +1,17 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
-import Art from "./components/Art";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div id="masterContainer" className="bg-white">
-      <Header />
-      <Home />
-      <Art />
-    </div>
+    <Router>
+      <div id="masterContainer" className="bg-white">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

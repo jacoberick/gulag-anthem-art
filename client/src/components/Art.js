@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Art = () => {
   const [art, setArt] = useState([]);
@@ -15,19 +16,25 @@ const Art = () => {
       });
   }, []);
 
+  //create url for each document from api
+  art.forEach((a) => {
+    let parsedName = a.name.toLowerCase().replace(/\s/g, "-");
+    a.href = parsedName;
+  });
+
   const artCollection = art.map((a) => (
-    <a
-      href="/"
+    <Link
+      to={`/art/${a.href}`}
       key={a._id}
       className="w-1/3 px-5 mt-10 hover:scale-105 duration-300 transform transition"
     >
       <img className="" src={a.cloudinary_link} alt={a.name} />
-    </a>
+    </Link>
   ));
 
   return (
     <div id="artContainer" className="mt-16 text-3xl h-screen bg-black">
-      <div id="inner" className="max-w-7xl px-12 mx-auto">
+      <div id="inner" className="max-w-screen-2xl px-14 mx-auto">
         <h1 className="pt-12 text-white text-4xl">ART</h1>
         <hr className="border-2 border-white" />
         <div id="artCollectionContainer" className="flex flex-wrap">
