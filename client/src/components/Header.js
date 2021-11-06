@@ -5,7 +5,7 @@ const Header = () => {
       <header className="px-12 py-3 max-w-7xl mx-auto flex items-center justify-between">
         <p className="uppercase font-jSans text-2xl">ga</p>
         <nav className="font-zen">
-          <a className={linkClass} href="/">
+          <a className={linkClass} href="#artContainer">
             art
           </a>
           <a className={`${linkClass} mx-12`} href="/">

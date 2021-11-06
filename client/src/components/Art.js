@@ -16,7 +16,13 @@ const Art = () => {
   }, []);
 
   const artCollection = art.map((a) => (
-    <img key={a._id} src={a.cloudinary_link} alt={a.name} />
+    <a
+      href="/"
+      key={a._id}
+      className="w-1/3 px-5 mt-10 hover:scale-105 duration-300 transform transition"
+    >
+      <img className="" src={a.cloudinary_link} alt={a.name} />
+    </a>
   ));
 
   return (
@@ -24,7 +30,9 @@ const Art = () => {
       <div id="inner" className="max-w-7xl px-12 mx-auto">
         <h1 className="pt-12 text-white text-4xl">ART</h1>
         <hr className="border-2 border-white" />
-        <div id="artCollectionContainer">{artCollection}</div>
+        <div id="artCollectionContainer" className="flex flex-wrap">
+          {artCollection}
+        </div>
       </div>
     </div>
   );
