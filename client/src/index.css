@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+#openSeaIcon {
+  transition: fill 0.15s;
+  fill: #fefefe;
+}
+
 #openSeaIcon:hover {
   fill: #004c91;
 }
