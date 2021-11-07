@@ -4,7 +4,7 @@ import Art from "./Art";
 
 const iconClass = "hover:text-trainBlue transition";
 
-const Home = () => {
+const Home = ({ setGlobalArtID }) => {
   return (
     <div id="homeContainer" className="">
       <div id="home" className="flex max-w-screen-2xl mx-auto px-14">
@@ -491,7 +491,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Art />
+      <Art setGlobalArtID={setGlobalArtID} />
     </div>
   );
 };

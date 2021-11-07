@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Art = () => {
+const Art = ({ setGlobalArtID }) => {
   const [art, setArt] = useState([]);
 
   useEffect(() => {
@@ -24,11 +24,12 @@ const Art = () => {
 
   const artCollection = art.map((a) => (
     <Link
+      onClick={() => setGlobalArtID(a._id)}
       to={`/art/${a.href}`}
       key={a._id}
       className="w-1/3 px-5 mt-10 hover:scale-105 duration-300 transform transition"
     >
-      <img className="" src={a.cloudinary_link} alt={a.name} />
+      <img className="" src={a.jpg} alt={a.name} />
     </Link>
   ));
 

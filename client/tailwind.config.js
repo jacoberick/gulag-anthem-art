@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        screenMinusHeader: "calc(100vh - 56px)",
+      },
       colors: {
         trainPink: "#ffd7f5",
         trainBlue: "#004c91",
