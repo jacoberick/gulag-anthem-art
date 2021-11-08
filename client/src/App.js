@@ -1,9 +1,12 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
+import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import IndividualArt from "./components/IndividualArt";
+import TreeLink from "./components/TreeLink";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { WithHeader, WithoutHeader } from "./layouts/_layouts";
 
 function App() {
   //global state for selected jpg
@@ -26,15 +29,39 @@ function App() {
   return (
     <Router>
       <div id="masterContainer" className="bg-white">
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route
             path="/"
-            element={<Home setGlobalArtID={setGlobalArtID} />}
+            element={
+              <WithHeader>
+                <Home setGlobalArtID={setGlobalArtID} />
+              </WithHeader>
+            }
           ></Route>
           <Route
             path="art/:artId"
-            element={<IndividualArt artID={artID} />}
+            element={
+              <WithHeader>
+                <IndividualArt artID={artID} />
+              </WithHeader>
+            }
+          ></Route>
+          <Route
+            path="/contact"
+            element={
+              <WithHeader>
+                <Contact />
+              </WithHeader>
+            }
+          ></Route>
+          <Route
+            path="/treelink"
+            element={
+              <WithoutHeader>
+                <NotFound />
+              </WithoutHeader>
+            }
           ></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

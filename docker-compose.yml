@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  client:
+    container_name: gaa_client
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    networks:
+      - ga_art
+    ports:
+      - 80:8080
+      - 443:8443
+    restart: unless-stopped
+
+  server:
+    container_name: gaa_server
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    networks:
+      - ga_art
+    ports:
+      - 5000:5000
+    restart: always
+
+networks:
+  ga_art:
+    external: true

@@ -11,9 +11,9 @@ module.exports = {
         screenMinusHeader: "calc(100vh - 56px)",
       },
       colors: {
-        trainPink: "#ffd7f5",
         trainBlue: "#004c91",
         black: "#121212",
+        white: "#fefefe",
         bg: "#252525",
       },
       fontFamily: {

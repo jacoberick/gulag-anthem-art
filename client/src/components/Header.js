@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const { pathname } = useLocation();
+
+  if (pathname === "/treelink") return null;
+
   const linkClass = "uppercase text-base hover:text-trainBlue transition";
   return (
     <div id="HeaderContainer">
@@ -12,12 +16,16 @@ const Header = () => {
           <a className={linkClass} href="/#artContainer">
             art
           </a>
-          <a className={`${linkClass} mx-12`} href="/">
+          <a
+            className={`${linkClass} mx-12`}
+            href="https://www.etsy.com/shop/GulagAnthem"
+            target="_blank"
+          >
             shop
           </a>
-          <a className={linkClass} href="/">
+          <Link className={linkClass} to="/contact">
             contact
-          </a>
+          </Link>
         </nav>
       </header>
     </div>

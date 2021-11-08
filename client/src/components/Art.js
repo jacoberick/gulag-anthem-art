@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_URI } from "../utility/constants";
 
 const Art = ({ setGlobalArtID }) => {
   const [art, setArt] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/record/")
+      .get(`${API_URI}/record/`)
       .then((res) => {
         setArt(res.data);
       })

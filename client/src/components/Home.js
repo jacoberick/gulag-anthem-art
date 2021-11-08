@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faEtsy,
+} from "@fortawesome/free-brands-svg-icons";
 import Art from "./Art";
 
 const iconClass = "hover:text-trainBlue transition";
@@ -472,13 +476,24 @@ const Home = ({ setGlobalArtID }) => {
             digital art
           </h2>
           <div id="iconLinks" className="text-2xl text-white">
-            <a href="https://www.instagram.com/gulaganthem/">
+            <a target="_blank" href="https://www.instagram.com/gulaganthem/">
               <FontAwesomeIcon className={iconClass} icon={faInstagram} />
             </a>
-            <a className="mx-6" href="https://twitter.com/gulaganthem">
+            <a
+              target="_blank"
+              className="mx-6"
+              href="https://twitter.com/gulaganthem"
+            >
               <FontAwesomeIcon className={iconClass} icon={faTwitter} />
             </a>
-            <a href="https://opensea.io/gulaganthem">
+            <a
+              target="_blank"
+              className="mr-6"
+              href="https://www.etsy.com/shop/GulagAnthem"
+            >
+              <FontAwesomeIcon className={iconClass} icon={faEtsy} />
+            </a>
+            <a target="_blank" href="https://opensea.io/gulaganthem">
               <svg
                 id="openSeaIcon"
                 className="inline-block h-6 mb-1 fill-current"

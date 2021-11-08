@@ -1,0 +1,10 @@
+FROM node:lts-alpine as builder
+COPY client/ /app/
+WORKDIR /app/
+RUN npm i && npm run build
+
+FROM bitnami/apache:latest
+USER root
+RUN apt-get update && apt-get install vim -y
+COPY --from=builder /app/build/ /app/
+EXPOSE 80
