@@ -7,6 +7,9 @@ module.exports = {
       whiteGlow: "0px 2.5px 15px rgba(254, 254, 254, .4)",
     },
     extend: {
+      screens: {
+        bOne: { max: "1000px" },
+      },
       height: {
         screenMinusHeader: "calc(100vh - 56px)",
       },

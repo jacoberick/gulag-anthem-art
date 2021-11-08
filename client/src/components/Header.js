@@ -5,7 +5,8 @@ const Header = () => {
 
   if (pathname === "/treelink") return null;
 
-  const linkClass = "uppercase text-base hover:text-trainBlue transition";
+  const linkClass =
+    "uppercase text-base hover:text-trainBlue transition bOne:text-sm ";
   return (
     <div id="HeaderContainer">
       <header className="px-14 py-3 max-w-screen-2xl mx-auto flex items-center justify-between">

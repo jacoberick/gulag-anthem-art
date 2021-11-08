@@ -37,7 +37,9 @@ const Art = ({ setGlobalArtID }) => {
   return (
     <div id="artContainer" className="mt-16 text-3xl h-screen bg-black">
       <div id="inner" className="max-w-screen-2xl px-14 mx-auto">
-        <h1 className="pt-12 text-white text-4xl">ART</h1>
+        <h1 className="pt-12 text-white text-4xl bOne:text-3xl uppercase">
+          art
+        </h1>
         <hr className="border-2 border-white" />
         <div id="artCollectionContainer" className="flex flex-wrap">
           {artCollection}

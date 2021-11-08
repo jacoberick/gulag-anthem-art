@@ -1,6 +1,7 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
+import Art from "./components/Art";
 import NotFound from "./components/NotFound";
 import IndividualArt from "./components/IndividualArt";
 import TreeLink from "./components/TreeLink";
@@ -36,6 +37,7 @@ function App() {
             element={
               <WithHeader>
                 <Home setGlobalArtID={setGlobalArtID} />
+                <Art />
               </WithHeader>
             }
           ></Route>
@@ -59,7 +61,7 @@ function App() {
             path="/treelink"
             element={
               <WithoutHeader>
-                <NotFound />
+                <TreeLink />
               </WithoutHeader>
             }
           ></Route>
