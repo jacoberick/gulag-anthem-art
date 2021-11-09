@@ -18,23 +18,30 @@ const IndividualArt = ({ artID }) => {
   }, [artID]);
 
   return (
-    <div className="relative h-screenMinusHeader bg-black p-12 flex items-center justify-center">
-      <div id="iaInner" className="max-w-screen-2xl flex justify-center">
-        <img className="w-1/2 mr-12" src={asset.jpg} alt="" />
+    <div className="relative h-screenMinusHeader bTwo:h-auto bg-black p-12 flex items-center justify-center">
+      <div
+        id="iaInner"
+        className="max-w-screen-2xl flex justify-center bTwo:flex-col bTwo:items-center"
+      >
+        <img
+          className="w-1/2 mr-12 bTwo:mr-0 bTwo:w-4/5"
+          src={asset.jpg}
+          alt=""
+        />
         <div
           id="artInfo"
-          className="font-jSans text-white text-3xl flex flex-col justify-center"
+          className="font-jSans text-white text-3xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
         >
           <p id="name" className="">
             {asset.name}
           </p>
           <p id="year">{asset.year}</p>
-          <p id="poem" className="text-base font-zen max-w-sm mt-4">
+          <p id="poem" className="text-base font-zen max-w-sm mt-4 bTwo:ml-6">
             {asset.poem}
           </p>
           <div id="artLinks" className="mt-4">
             {asset.open_sea ? (
-              <a className="" href="">
+              <a className="" href="/">
                 <svg
                   id="openSeaIcon"
                   className="inline-block h-6 mb-1 fill-current mr-4"
@@ -47,6 +54,7 @@ const IndividualArt = ({ artID }) => {
             ) : null}
             {asset.etsy ? (
               <a
+                rel="noreferrer"
                 target="_blank"
                 href={asset.etsy}
                 className="text-xl hover:text-trainBlue transition"
@@ -56,8 +64,8 @@ const IndividualArt = ({ artID }) => {
             ) : null}
           </div>
 
-          <a className="self-center" href="/#artContainer">
-            <button className="text-base hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded">
+          <a className="self-center bTwo:self-end" href="/#artContainer">
+            <button className="text-base hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8">
               Return
             </button>
           </a>

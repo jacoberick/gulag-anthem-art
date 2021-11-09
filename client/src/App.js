@@ -1,5 +1,4 @@
 import Home from "./components/Home";
-import Header from "./components/Header";
 import Contact from "./components/Contact";
 import Art from "./components/Art";
 import NotFound from "./components/NotFound";
@@ -20,6 +19,7 @@ function App() {
   //function that fires onClick of jpg from Art component
   const setGlobalArtID = (id) => {
     setArtID(id);
+    console.log(id);
   };
 
   //sets local storage in case of refresh of IndividualArt component
@@ -36,8 +36,8 @@ function App() {
             path="/"
             element={
               <WithHeader>
-                <Home setGlobalArtID={setGlobalArtID} />
-                <Art />
+                <Home />
+                <Art setGlobalArtID={setGlobalArtID} />
               </WithHeader>
             }
           ></Route>

@@ -18,6 +18,7 @@ const Header = () => {
             art
           </a>
           <a
+            rel="noreferrer"
             className={`${linkClass} mx-12`}
             href="https://www.etsy.com/shop/GulagAnthem"
             target="_blank"

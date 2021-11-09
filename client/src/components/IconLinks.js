@@ -10,10 +10,15 @@ const iconClass = "hover:text-trainBlue transition";
 const IconLinks = () => {
   return (
     <div id="iconLinks" className="text-2xl text-white bOne:text-xl">
-      <a target="_blank" href="https://www.instagram.com/gulaganthem/">
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://www.instagram.com/gulaganthem/"
+      >
         <FontAwesomeIcon className={iconClass} icon={faInstagram} />
       </a>
       <a
+        rel="noreferrer"
         target="_blank"
         className="mx-6"
         href="https://twitter.com/gulaganthem"
@@ -21,13 +26,14 @@ const IconLinks = () => {
         <FontAwesomeIcon className={iconClass} icon={faTwitter} />
       </a>
       <a
+        rel="noreferrer"
         target="_blank"
         className="mr-6"
         href="https://www.etsy.com/shop/GulagAnthem"
       >
         <FontAwesomeIcon className={iconClass} icon={faEtsy} />
       </a>
-      <a target="_blank" href="https://opensea.io/gulaganthem">
+      <a rel="noreferrer" target="_blank" href="https://opensea.io/gulaganthem">
         <svg
           id="openSeaIcon"
           className="inline-block h-6 bOne:h-5 mb-1 fill-current"

@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       screens: {
         bOne: { max: "1000px" },
+        bTwo: { max: "902px" },
       },
       height: {
         screenMinusHeader: "calc(100vh - 56px)",

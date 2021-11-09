@@ -15,6 +15,7 @@ const TreeLink = () => {
         <IconLinks />
         <div className="mt-8">
           <a
+            rel="noreferrer"
             target="_blank"
             className={buttonClass}
             href="https://www.etsy.com/shop/GulagAnthem"
@@ -22,6 +23,7 @@ const TreeLink = () => {
             <button>Prints</button>
           </a>
           <a
+            rel="noreferrer"
             target="_blank"
             className={buttonClass}
             href="https://opensea.io/gulaganthem"
@@ -29,6 +31,7 @@ const TreeLink = () => {
             <button>NFTs</button>
           </a>
           <a
+            rel="noreferrer"
             target="_blank"
             className={buttonClass}
             href="http://gulaganthem.com"
