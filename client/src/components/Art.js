@@ -28,16 +28,16 @@ const Art = ({ setGlobalArtID }) => {
       onClick={() => setGlobalArtID(a._id)}
       to={`/art/${a.href}`}
       key={a._id}
-      className="w-1/3 px-5 mt-10 hover:scale-105 duration-300 transform transition"
+      className="w-1/3 bFour:w-1/2 px-5 mt-10 hover:scale-105 duration-300 transform transition"
     >
       <img className="" src={a.jpg} alt={a.name} />
     </Link>
   ));
 
   return (
-    <div id="artContainer" className="mt-16 text-3xl h-screen bg-black">
-      <div id="inner" className="max-w-screen-2xl px-14 mx-auto">
-        <h1 className="pt-12 text-white text-4xl bOne:text-3xl uppercase">
+    <div id="artContainer" className="text-3xl h-screen bg-black">
+      <div id="inner" className="max-w-screen-2xl px-14 mx-auto bFour:px-7">
+        <h1 className="pt-12 text-white text-4xl bOne:text-3xl uppercase bThree:text-2xl">
           art
         </h1>
         <hr className="border-2 border-white" />

@@ -19,7 +19,6 @@ function App() {
   //function that fires onClick of jpg from Art component
   const setGlobalArtID = (id) => {
     setArtID(id);
-    console.log(id);
   };
 
   //sets local storage in case of refresh of IndividualArt component

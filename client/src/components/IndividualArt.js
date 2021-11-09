@@ -18,7 +18,7 @@ const IndividualArt = ({ artID }) => {
   }, [artID]);
 
   return (
-    <div className="relative h-screenMinusHeader bTwo:h-auto bg-black p-12 flex items-center justify-center">
+    <div className="relative h-screenMinusHeader bTwo:h-auto bg-black p-12 bFour:px-2 flex items-center justify-center">
       <div
         id="iaInner"
         className="max-w-screen-2xl flex justify-center bTwo:flex-col bTwo:items-center"
@@ -30,13 +30,16 @@ const IndividualArt = ({ artID }) => {
         />
         <div
           id="artInfo"
-          className="font-jSans text-white text-3xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
+          className="font-jSans text-white text-3xl bFour:text-2xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
         >
           <p id="name" className="">
             {asset.name}
           </p>
           <p id="year">{asset.year}</p>
-          <p id="poem" className="text-base font-zen max-w-sm mt-4 bTwo:ml-6">
+          <p
+            id="poem"
+            className="text-base bFour:text-sm font-zen max-w-sm mt-4 bTwo:ml-6"
+          >
             {asset.poem}
           </p>
           <div id="artLinks" className="mt-4">
@@ -64,8 +67,8 @@ const IndividualArt = ({ artID }) => {
             ) : null}
           </div>
 
-          <a className="self-center bTwo:self-end" href="/#artContainer">
-            <button className="text-base hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8">
+          <a className="self-center" href="/#artContainer">
+            <button className="text-base bFour:text-sm hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8">
               Return
             </button>
           </a>

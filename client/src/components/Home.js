@@ -3,8 +3,11 @@ import IconLinks from "./IconLinks";
 const Home = ({ setGlobalArtID }) => {
   return (
     <div id="homeContainer" className="">
-      <div id="home" className="flex max-w-screen-2xl mx-auto px-14">
-        <div id="left" className="w-1/2">
+      <div
+        id="home"
+        className="flex max-w-screen-2xl mx-auto px-14 pb-14 bFour:flex-col bFour:items-center bFour:px-7 bFour:pb-7"
+      >
+        <div id="left" className="w-1/2 bFour:w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
             <g>
               <path
@@ -459,12 +462,12 @@ const Home = ({ setGlobalArtID }) => {
         </div>
         <div
           id="right"
-          className="w-1/2 flex flex-col justify-center items-center bg-black"
+          className="w-1/2 flex flex-col justify-center items-center bg-black bFour:w-full bFour:py-4"
         >
-          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white bOne:text-3xl">
+          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white bOne:text-3xl bThree:text-2xl">
             gulag anthem
           </h1>
-          <h2 className="font-zen uppercase text-white mb-3 text-lg bOne:text-base">
+          <h2 className="font-zen uppercase text-white mb-3 text-lg bOne:text-base bThree:text-sm bTwo:mt-1">
             digital art
           </h2>
           <IconLinks />

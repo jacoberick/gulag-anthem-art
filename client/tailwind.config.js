@@ -10,6 +10,8 @@ module.exports = {
       screens: {
         bOne: { max: "1000px" },
         bTwo: { max: "902px" },
+        bThree: { max: "750px" },
+        bFour: { max: "600px" },
       },
       height: {
         screenMinusHeader: "calc(100vh - 56px)",

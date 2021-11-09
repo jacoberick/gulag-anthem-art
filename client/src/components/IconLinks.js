@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocation } from "react-router";
 import {
   faInstagram,
   faTwitter,
@@ -8,8 +9,20 @@ import {
 const iconClass = "hover:text-trainBlue transition";
 
 const IconLinks = () => {
+  //conditionally render classes based on pathname
+  const location = useLocation();
+  let regulatedBPoints = "";
+  let regulatedSVG = "";
+  if (location.pathname === "/treelink") {
+    regulatedBPoints = "";
+    regulatedSVG = "";
+  } else if (location.pathname === "/") {
+    regulatedBPoints = "bOne:text-xl bThree:text-lg bFour:text-xl";
+    regulatedSVG = "bOne:h-5";
+  }
+
   return (
-    <div id="iconLinks" className="text-2xl text-white bOne:text-xl">
+    <div id="iconLinks" className={`text-2xl text-white ${regulatedBPoints}`}>
       <a
         rel="noreferrer"
         target="_blank"
@@ -20,7 +33,7 @@ const IconLinks = () => {
       <a
         rel="noreferrer"
         target="_blank"
-        className="mx-6"
+        className="mx-8"
         href="https://twitter.com/gulaganthem"
       >
         <FontAwesomeIcon className={iconClass} icon={faTwitter} />
@@ -28,7 +41,7 @@ const IconLinks = () => {
       <a
         rel="noreferrer"
         target="_blank"
-        className="mr-6"
+        className="mr-8"
         href="https://www.etsy.com/shop/GulagAnthem"
       >
         <FontAwesomeIcon className={iconClass} icon={faEtsy} />
@@ -36,7 +49,7 @@ const IconLinks = () => {
       <a rel="noreferrer" target="_blank" href="https://opensea.io/gulaganthem">
         <svg
           id="openSeaIcon"
-          className="inline-block h-6 bOne:h-5 mb-1 fill-current"
+          className={`inline-block h-6 mb-1 fill-current ${regulatedSVG}`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 90 90"
         >

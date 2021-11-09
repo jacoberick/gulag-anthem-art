@@ -3,7 +3,7 @@ import IconLinks from "./IconLinks";
 const buttonClass =
   "text-black font-zen bg-white px-32 py-2 rounded block text-center mb-6";
 
-const TreeLink = () => {
+const TreeLink = (props) => {
   return (
     <div
       id="treeLinkContainer"
