@@ -2,13 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { API_URI } from "../utility/constants";
 
 const IndividualArt = ({ artID }) => {
   const [asset, setAsset] = useState({});
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/record/${artID}`)
+      .get(`${API_URI}/record/${artID}`)
       .then((res) => {
         setAsset(res.data);
       })
@@ -18,10 +19,10 @@ const IndividualArt = ({ artID }) => {
   }, [artID]);
 
   return (
-    <div className="relative h-screenMinusHeader bTwo:h-auto bg-black p-12 bFour:px-2 flex items-center justify-center">
+    <div className="relative flex items-center justify-center p-12 bg-black h-screenMinusHeader bTwo:h-auto bFour:px-2">
       <div
         id="iaInner"
-        className="max-w-screen-2xl flex justify-center bTwo:flex-col bTwo:items-center"
+        className="flex justify-center max-w-screen-2xl bTwo:flex-col bTwo:items-center"
       >
         <img
           className="w-1/2 mr-12 bTwo:mr-0 bTwo:w-4/5"
@@ -30,7 +31,7 @@ const IndividualArt = ({ artID }) => {
         />
         <div
           id="artInfo"
-          className="font-jSans text-white text-3xl bFour:text-2xl bFourSevenFive:text-xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
+          className="flex flex-col justify-center text-3xl text-white font-jSans bFour:text-2xl bFourSevenFive:text-xl bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
         >
           <p id="name" className="">
             {asset.name}
@@ -38,7 +39,7 @@ const IndividualArt = ({ artID }) => {
           <p id="year">{asset.year}</p>
           <p
             id="poem"
-            className="text-base bFour:text-sm font-zen max-w-sm mt-4 bTwo:ml-6 bFour:ml-0"
+            className="max-w-sm mt-4 text-base bFour:text-sm font-zen bTwo:ml-6 bFour:ml-0"
           >
             {asset.poem}
           </p>
@@ -47,7 +48,7 @@ const IndividualArt = ({ artID }) => {
               <a className="" href="/">
                 <svg
                   id="openSeaIcon"
-                  className="inline-block h-6 mb-1 fill-current mr-4"
+                  className="inline-block h-6 mb-1 mr-4 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 90 90"
                 >
@@ -60,7 +61,7 @@ const IndividualArt = ({ artID }) => {
                 rel="noreferrer"
                 target="_blank"
                 href={asset.etsy}
-                className="text-xl hover:text-trainBlue transition"
+                className="text-xl transition hover:text-trainBlue"
               >
                 <FontAwesomeIcon icon={faShoppingCart} />
               </a>
@@ -68,7 +69,7 @@ const IndividualArt = ({ artID }) => {
           </div>
 
           <a className="self-center" href="/#artContainer">
-            <button className="text-base bFour:text-sm hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8 bFivePFive:text-xs">
+            <button className="px-4 pt-1 pb-2 mt-16 text-base transition border-2 border-white rounded bFour:text-sm hover:shadow-whiteGlow font-zen bTwo:mt-8 bFivePFive:text-xs">
               Return
             </button>
           </a>
