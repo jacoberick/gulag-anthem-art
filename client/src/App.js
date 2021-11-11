@@ -64,7 +64,14 @@ function App() {
               </WithoutHeader>
             }
           ></Route>
-          <Route path="*" element={<NotFound />}></Route>
+          <Route
+            path="*"
+            element={
+              <WithHeader>
+                <NotFound />
+              </WithHeader>
+            }
+          ></Route>
         </Routes>
       </div>
     </Router>
