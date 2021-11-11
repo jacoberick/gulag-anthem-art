@@ -31,7 +31,7 @@ const Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
 
   const handleBurgerClick = () => {
-    document.getElementById("burgerButton").classList.toggle("rotate-90");
+    document.getElementById("burgerButton").classList.toggle("-rotate-90");
     document
       .getElementsByTagName("body")[0]
       .classList.toggle("overflow-hidden");

@@ -6,14 +6,18 @@ const Contact = () => {
     >
       <div
         id="contactInner"
-        className="text-white font-jSans text-5xl max-w-screen-2xl mx-auto"
+        className="text-white font-jSans max-w-screen-2xl mx-auto p-5"
       >
-        <p className="text-xl mb-4 uppercase">for all inquiries</p>
+        <p className="text-xl mb-4 uppercase bThree:text-lg bFive:text-base bFivePFive:text-sm bFourSevenFive:text-xs">
+          for all inquiries
+        </p>
         <a
           className="hover:underline hover:text-trainBlue transition duration-500"
           href="mailto: gulaganthem@gmail.com"
         >
-          <p>gulaganthem@gmail.com</p>
+          <p className="text-5xl bThree:text-4xl bFive:text-3xl bFivePFive:text-2xl bFourSevenFive:text-xl">
+            gulaganthem@gmail.com
+          </p>
         </a>
       </div>
     </div>

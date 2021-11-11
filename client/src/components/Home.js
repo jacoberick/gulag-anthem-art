@@ -464,7 +464,7 @@ const Home = ({ setGlobalArtID }) => {
           id="right"
           className="w-1/2 flex flex-col justify-center items-center bg-black bFour:w-full bFour:py-4"
         >
-          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white bOne:text-3xl bThree:text-2xl">
+          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white bOne:text-3xl bThree:text-2xl bSix:text-xl">
             gulag anthem
           </h1>
           <h2 className="font-zen uppercase text-white mb-3 text-lg bOne:text-base bThree:text-sm bTwo:mt-1">

@@ -30,7 +30,7 @@ const IndividualArt = ({ artID }) => {
         />
         <div
           id="artInfo"
-          className="font-jSans text-white text-3xl bFour:text-2xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
+          className="font-jSans text-white text-3xl bFour:text-2xl bFourSevenFive:text-xl flex flex-col justify-center bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
         >
           <p id="name" className="">
             {asset.name}
@@ -38,7 +38,7 @@ const IndividualArt = ({ artID }) => {
           <p id="year">{asset.year}</p>
           <p
             id="poem"
-            className="text-base bFour:text-sm font-zen max-w-sm mt-4 bTwo:ml-6"
+            className="text-base bFour:text-sm font-zen max-w-sm mt-4 bTwo:ml-6 bFour:ml-0"
           >
             {asset.poem}
           </p>
@@ -68,7 +68,7 @@ const IndividualArt = ({ artID }) => {
           </div>
 
           <a className="self-center" href="/#artContainer">
-            <button className="text-base bFour:text-sm hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8">
+            <button className="text-base bFour:text-sm hover:shadow-whiteGlow transition mt-16 font-zen border-2 border-white px-4 pt-1 pb-2 rounded bTwo:mt-8 bFivePFive:text-xs">
               Return
             </button>
           </a>

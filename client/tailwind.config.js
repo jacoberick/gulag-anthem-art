@@ -12,6 +12,10 @@ module.exports = {
         bTwo: { max: "902px" },
         bThree: { max: "750px" },
         bFour: { max: "600px" },
+        bFive: { max: "500px" },
+        bFivePFive: { max: "450px" },
+        bFourSevenFive: { max: "350px" },
+        bSix: { max: "300px" },
       },
       height: {
         screenMinusHeader: "calc(100vh - 56px)",
