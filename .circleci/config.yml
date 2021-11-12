@@ -20,7 +20,7 @@ commands:
             EOF
       - run:
           name: Build Gulag Anthem Art Client Image
-          command: docker build -t jacobwhitedev/gulag-anthem-art:client Dockerfile.client
+          command: docker build -t jacobwhitedev/gulag-anthem-art:client -f Dockerfile.client .
       - run:
           name: Build Server ENV file
           command: |
@@ -29,7 +29,7 @@ commands:
             EOF
       - run:
           name: Build Gulag Anthem Art Server Image
-          command: docker build -t jacobwhitedev/gulag-anthem-art:server Dockerfile.server
+          command: docker build -t jacobwhitedev/gulag-anthem-art:server -f Dockerfile.server .
   
   docker_deploy:
     description: Deploy Images
