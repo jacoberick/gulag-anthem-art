@@ -3,9 +3,7 @@ version: "3"
 services:
   client:
     container_name: gaa_client
-    build:
-      context: .
-      dockerfile: Dockerfile.client
+    image: jacobwhitedev/gulag-anthem-art:client
     networks:
       - ga_art
     expose:
@@ -15,9 +13,7 @@ services:
 
   server:
     container_name: gaa_server
-    build:
-      context: .
-      dockerfile: Dockerfile.server
+    image: jacobwhitedev/gulag-anthem-art:server
     networks:
       - ga_art
     expose:

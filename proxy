@@ -6,11 +6,6 @@ server {
   return 301 https://$host$request_uri;
 }
 
-upstream api {
-  server gaa_server:5000;
-  server gaa_server_backup:5000 backup;
-}
-
 server {
   listen 443 ssl http2;
   server_name gulaganthem.com *.gulaganthem.com;
@@ -35,7 +30,7 @@ server {
   }  
 
   location /api {
-    proxy_pass http://api;
+    proxy_pass http://gaa_server;
     proxy_redirect off;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;

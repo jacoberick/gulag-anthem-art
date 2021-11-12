@@ -1,0 +1,89 @@
+version: 2.1
+
+# Reusable commands to be used in jobs
+commands:  
+  docker_auth:
+    description: Authenticate DockerHub
+    steps:
+      - run:
+          name: Login
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_TOKEN
+  
+  docker_build:
+    description: Build Images
+    steps:
+      - run:
+          name: Build ENV file
+          command: |
+            cat > client/.env.local \<< EOF
+            REACT_APP_API_URL=$REACT_APP_API_URL
+            EOF
+      - run:
+          name: Build Gulag Anthem Art Image
+          command: docker build -t jacobwhitedev/gulag-anthem-art:client Dockerfile.client
+      - run:
+          name: Build ENV file
+          command: |
+            cat > server/config.env \<< EOF
+            ATLAS_URI=$ATLAS_URI
+            EOF
+      - run:
+          name: Build Gulag Anthem Art Image
+          command: docker build -t jacobwhitedev/gulag-anthem-art:server Dockerfile.server
+  
+  docker_deploy:
+    description: Deploy Images
+    steps:
+      - run:
+          name: Deploy client image to DockerHub
+          command: docker push jacobwhitedev/gulag-anthem-art:client
+      - run:
+          name: Deploy server image to DockerHub
+          command: docker push jacobwhitedev/gulag-anthem-art:server
+  
+  do_deploy:
+    description: Deploy to DigitalOcean
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - ""
+      - run:
+          name: Deploy Gulag Anthem Art
+          command: |
+            ssh-keyscan $DIGITAL_OCEAN_IP >> ~/.ssh/known_hosts &&
+            ssh root@$DIGITAL_OCEAN_IP "docker login -u $DOCKER_USERNAME -p $DOCKER_TOKEN && 
+            docker-compose pull client server &&
+            docker-compose up -d --force-recreate client server &&
+            docker image prune -a -f"
+
+# CircleCI jobs used in our CI workflow
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable-18.04
+    working_directory: ~/project
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 20.10.6
+          docker_layer_caching: true
+      - docker_auth
+      - docker_build
+      - docker_deploy
+      - do_deploy
+
+# Workflows dependent on branch/tag
+workflows:
+  production:
+    jobs:
+      - build:
+          name: ci-production
+          context: 
+            - dockerhub
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*$/
+
+
