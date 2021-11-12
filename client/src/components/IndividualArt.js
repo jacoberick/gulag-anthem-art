@@ -2,13 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { API_URI } from "../utility/constants";
 
 const IndividualArt = ({ artID }) => {
   const [asset, setAsset] = useState({});
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/record/${artID}`)
+      .get(`${API_URI}/record/${artID}`)
       .then((res) => {
         setAsset(res.data);
       })
