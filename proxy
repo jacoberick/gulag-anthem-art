@@ -19,7 +19,7 @@ server {
   client_max_body_size 0;
 
   location / {
-    proxy_pass http://gaa_client:;
+    proxy_pass http://gaa_client:8080;
     proxy_redirect off;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
@@ -30,7 +30,7 @@ server {
   }  
 
   location /api {
-    proxy_pass http://gaa_server;
+    proxy_pass http://gaa_server:5000;
     proxy_redirect off;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;

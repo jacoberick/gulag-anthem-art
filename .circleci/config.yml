@@ -81,6 +81,8 @@ workflows:
             - dockerhub
           filters:
             branches:
-              only: /^(master|main)$/
+              ignore: /^(.*)$/
+            tags:
+              only: /^v.*$/
 
 
