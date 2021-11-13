@@ -13,7 +13,7 @@ const TreeLink = (props) => {
         <h1 className="text-white uppercase text-3xl bFivePFive:text-2xl">
           gulag anthem
         </h1>
-        <hr className="border-1 border-white mb-8 w-full" />
+        <hr className="border-t-2 border-white mb-8 w-full" />
         <IconLinks />
         <div className="mt-8">
           <a

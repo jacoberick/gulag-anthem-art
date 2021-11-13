@@ -28,7 +28,7 @@ const Art = ({ setGlobalArtID }) => {
       onClick={() => setGlobalArtID(a._id)}
       to={`/art/${a.href}`}
       key={a._id}
-      className="w-1/3 bFour:w-1/2 bFive:w-full px-5 mt-10 hover:scale-105 duration-300 transform transition"
+      className="w-1/3 bFour:w-1/2 bFive:w-full px-5 bFive:px-0 mt-10 hover:scale-105 duration-300 transform transition"
     >
       <img className="" src={a.jpg} alt={a.name} />
     </Link>
@@ -40,7 +40,7 @@ const Art = ({ setGlobalArtID }) => {
         <h1 className="pt-12 text-white text-4xl bOne:text-3xl uppercase bThree:text-2xl">
           art
         </h1>
-        <hr className="border-2 border-white" />
+        <hr className="border-t-2 border-white" />
         <div id="artCollectionContainer" className="flex flex-wrap">
           {artCollection}
         </div>
