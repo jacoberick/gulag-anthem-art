@@ -41,7 +41,7 @@ const Header = () => {
   const mobileNav = (
     <div
       id="mobileNavContainer"
-      className={`transition-all hidden bFour:block bg-trainBlue text-white h-screenMinusHeader w-3/4 absolute ${
+      className={`transition-all hidden bFour:block bg-trainBlueOpacity text-white h-screenMinusHeader w-3/4 absolute ${
         activeBurger ? "right-0" : "right-full"
       } z-10 p-5`}
     >

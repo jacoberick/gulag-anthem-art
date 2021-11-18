@@ -22,6 +22,7 @@ module.exports = {
       },
       colors: {
         trainBlue: "#004c91",
+        trainBlueOpacity: "rgba(0, 76, 145, 0.9)",
         black: "#121212",
         white: "#fefefe",
         bg: "#252525",
