@@ -1,6 +1,6 @@
 # Gulag Anthem Art Portfolio
 
-A digital art portfolio that utlizes the MERN stack. (MongoDb, Express, React, and Node).
+A digital art portfolio that utilizes the MERN stack. (MongoDb, Express, React, and Node).
 
 ## How MERN works...
 
