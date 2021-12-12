@@ -36,9 +36,17 @@ const TreeLink = (props) => {
             rel="noreferrer"
             target="_blank"
             className={buttonClass}
-            href="http://gulaganthem.com"
+            href="https://gulaganthem.com"
           >
             <button>gulaganthem.com</button>
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className={buttonClass}
+            href="https://umbrellacode.xyz"
+          >
+            <button>UMBRELLA Algorithm</button>
           </a>
         </div>
       </div>
