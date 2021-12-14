@@ -3,6 +3,8 @@ import IconLinks from "./IconLinks";
 const buttonClass =
   "text-black font-zen bg-white px-32 py-2 bFivePFive:px-20 rounded block text-center mb-6 bFivePFive:text-sm bFourSevenFive:px-12";
 
+// Need to introduce a dynamic way to load these buttons
+
 const TreeLink = (props) => {
   return (
     <div
