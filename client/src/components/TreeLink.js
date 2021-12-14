@@ -3,7 +3,12 @@ import IconLinks from "./IconLinks";
 const buttonClass =
   "text-black font-zen bg-white px-32 py-2 bFivePFive:px-20 rounded block text-center mb-6 bFivePFive:text-sm bFourSevenFive:px-12";
 
-// Need to introduce a dynamic way to load these buttons
+let infoArr = [
+  { name: "Prints", href: "https://www.etsy.com/shop/GulagAnthem" },
+  { name: "NFTs", href: "https://opensea.io/gulaganthem" },
+  { name: "gulaganthem.com", href: "https://gulaganthem.com" },
+  { name: "UMBRELLA Algorithm", href: "https://umbrellacode.xyz" },
+];
 
 const TreeLink = (props) => {
   return (
@@ -18,38 +23,16 @@ const TreeLink = (props) => {
         <hr className="border-t-2 border-white mb-8 w-full" />
         <IconLinks />
         <div className="mt-8">
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className={buttonClass}
-            href="https://www.etsy.com/shop/GulagAnthem"
-          >
-            <button>Prints</button>
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className={buttonClass}
-            href="https://opensea.io/gulaganthem"
-          >
-            <button>NFTs</button>
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className={buttonClass}
-            href="https://gulaganthem.com"
-          >
-            <button>gulaganthem.com</button>
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className={buttonClass}
-            href="https://umbrellacode.xyz"
-          >
-            <button>UMBRELLA Algorithm</button>
-          </a>
+          {infoArr.map((x) => (
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className={buttonClass}
+              href={x.href}
+            >
+              <button>{x.name}</button>
+            </a>
+          ))}
         </div>
       </div>
     </div>
