@@ -17,7 +17,7 @@ const Art = ({ setGlobalArtID }) => {
       });
   }, []);
 
-  //create url for each document from api
+  // create url for each document from api
   art.forEach((a) => {
     let parsedName = a.name.toLowerCase().replace(/\s/g, "-");
     a.href = parsedName;
