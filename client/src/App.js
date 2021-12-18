@@ -1,6 +1,7 @@
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Art from "./components/Art";
+import MadeWithCode from "./components/MadeWithCode";
 import NotFound from "./components/NotFound";
 import IndividualArt from "./components/IndividualArt";
 import TreeLink from "./components/TreeLink";
@@ -29,7 +30,6 @@ function App() {
   return (
     <Router>
       <div id="masterContainer" className="bg-white">
-        {/* <Header /> */}
         <Routes>
           <Route
             path="/"
@@ -37,6 +37,7 @@ function App() {
               <WithHeader>
                 <Home />
                 <Art setGlobalArtID={setGlobalArtID} />
+                <MadeWithCode />
               </WithHeader>
             }
           ></Route>
