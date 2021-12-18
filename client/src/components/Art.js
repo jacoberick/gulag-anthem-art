@@ -28,7 +28,7 @@ const Art = ({ setGlobalArtID }) => {
       onClick={() => setGlobalArtID(a._id)}
       to={`/art/${a.href}`}
       key={a._id}
-      className="w-1/3 bFour:w-1/2 bFive:w-full px-5 bFive:px-0 mt-10 hover:scale-105 duration-300 transform transition"
+      className="flex items-center w-1/3 bFour:w-1/2 bFive:w-full px-5 bFive:px-0 mt-10 hover:scale-105 duration-300 transform transition"
     >
       <img className="" src={a.jpg} alt={a.name} />
     </Link>
