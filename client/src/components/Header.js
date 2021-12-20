@@ -4,18 +4,21 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const linkClass =
-  "uppercase text-base hover:text-trainBlue transition bOne:text-sm font-zen";
+  "uppercase text-base hover:text-trainBlue transition bOne:text-sm font-zen ml-8";
 
-const mobileLinkClass = "uppercase font-zen text-3xl";
+const mobileLinkClass = "uppercase font-zen text-3xl mb-8";
 
 const desktopNav = (
   <nav className="bFour:hidden">
     <a className={linkClass} href="/#artContainer">
       art
     </a>
+    <a className={linkClass} href="/#artContainer">
+      generative projects
+    </a>
     <a
       rel="noreferrer"
-      className={`${linkClass} mx-12`}
+      className={`${linkClass}`}
       href="https://www.etsy.com/shop/GulagAnthem"
       target="_blank"
     >
@@ -55,8 +58,15 @@ const Header = () => {
         </a>
         <a
           onClick={handleBurgerClick}
+          className={mobileLinkClass}
+          href="/#artContainer"
+        >
+          generative projects
+        </a>
+        <a
+          onClick={handleBurgerClick}
           rel="noreferrer"
-          className={`${mobileLinkClass} py-8`}
+          className={`${mobileLinkClass}`}
           href="https://www.etsy.com/shop/GulagAnthem"
           target="_blank"
         >
