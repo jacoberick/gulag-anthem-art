@@ -20,7 +20,7 @@ const MadeWithCode = () => {
 
     let y = e.nativeEvent.offsetY / 5;
     text.style.transform = `translate(${textX}px, -50%)`;
-    img.style.transform = `translate(${imgX}px)`;
+    img.style.transform = `translate(${imgX}px) scale(1.5)`;
   };
 
   const returnTextPosition = (e) => {
@@ -49,11 +49,15 @@ const MadeWithCode = () => {
                 href={x.href}
                 target="_blank"
                 rel="noreferrer"
-                className="h-52 overflow-hidden flex items-center relative transition duration-200 transform"
+                className="h-52 overflow-hidden flex items-center relative transform"
                 key={x.id}
               >
-                <img src={`./img/${x.imgSrc}`} alt={x.name} />
-                <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl transition-all duration-75 whitespace-nowrap pointer-events-none">
+                <img
+                  src={`./img/${x.imgSrc}`}
+                  alt={x.name}
+                  className="transform scale-150"
+                />
+                <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl duration-75 whitespace-nowrap pointer-events-none">
                   {x.name}
                 </p>
               </a>
