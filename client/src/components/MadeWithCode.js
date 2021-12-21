@@ -8,11 +8,19 @@ const MadeWithCode = () => {
     },
   ];
 
-  const parallaxMe = (e) => {
+  const followMouse = (e) => {
+    let container = e.currentTarget;
+    let text = container.querySelector("p");
+    let x = container.offsetWidth / 2 - e.nativeEvent.offsetX;
+    let y = container.offsetHeight / 2 - e.nativeEvent.offsetY / 15;
+    text.style.transform = `translate(${x}px, ${y}px)`;
+    console.log(container.offsetHeight, e.nativeEvent);
+  };
+
+  const returnTextPosition = (e) => {
     let text = e.currentTarget.querySelector("p");
-    let textPosition = text.getBoundingClientRect();
-    text.style.left = `${textPosition.left + (textPosition.left - e.pageX)}px`;
-    console.log(textPosition.left - e.pageX);
+    text.innerHTML = "UMBRELLA";
+    text.style.transform = "translate(-50%, -50%)";
   };
 
   return (
@@ -28,12 +36,13 @@ const MadeWithCode = () => {
               href={x.href}
               target="_blank"
               rel="noreferrer"
-              className="h-52 overflow-hidden flex items-center my-10 relative text-center transition duration-200 transform hover:scale-105"
+              className="h-52 overflow-hidden flex items-center my-10 relative transition duration-200 transform"
               key={x.id}
-              onMouseMove={parallaxMe}
+              onMouseMove={followMouse}
+              onMouseLeave={returnTextPosition}
             >
               <img src={`./img/${x.imgSrc}`} alt={x.name} className="" />
-              <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl">
+              <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl transition-all duration-75 whitespace-nowrap pointer-events-none">
                 {x.name}
               </p>
             </a>
