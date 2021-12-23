@@ -19,19 +19,19 @@ const IndividualArt = ({ artID }) => {
   }, [artID]);
 
   return (
-    <div className="relative flex items-center justify-center p-12 bg-black h-screenMinusHeader bTwo:h-auto bFour:px-2">
+    <div className="relative flex items-center justify-center p-12 bg-black h-screenMinusHeader b902:h-auto b600:px-2">
       <div
         id="iaInner"
-        className="flex justify-center max-w-screen-2xl bTwo:flex-col bTwo:items-center"
+        className="flex justify-center max-w-screen-2xl b902:flex-col b902:items-center"
       >
         <img
-          className="w-1/2 mr-12 bTwo:mr-0 bTwo:w-4/5"
+          className="w-1/2 mr-12 b902:mr-0 b902:w-4/5"
           src={asset.jpg}
           alt=""
         />
         <div
           id="artInfo"
-          className="flex flex-col justify-center text-3xl text-white font-jSans bFour:text-2xl bFourSevenFive:text-xl bTwo:mt-8 bTwo:w-4/5 bTwo:items-center"
+          className="flex flex-col justify-center text-3xl text-white font-jSans b600:text-2xl b350:text-xl b902:mt-8 b902:w-4/5 b902:items-center"
         >
           <p id="name" className="">
             {asset.name}
@@ -39,7 +39,7 @@ const IndividualArt = ({ artID }) => {
           <p id="year">{asset.year}</p>
           <p
             id="poem"
-            className="max-w-sm mt-4 text-base bFour:text-sm font-zen bTwo:ml-6 bFour:ml-0"
+            className="max-w-sm mt-4 text-base b600:text-sm font-zen b902:ml-6 b600:ml-0"
           >
             {asset.poem}
           </p>
@@ -69,7 +69,7 @@ const IndividualArt = ({ artID }) => {
           </div>
 
           <a className="self-center" href="/#artContainer">
-            <button className="px-4 pt-1 pb-2 mt-16 text-base transition border-2 border-white rounded bFour:text-sm hover:shadow-whiteGlow font-zen bTwo:mt-8 bFivePFive:text-xs">
+            <button className="px-4 pt-1 pb-2 mt-16 text-base transition border-2 border-white rounded b600:text-sm hover:shadow-whiteGlow font-zen b902:mt-8 b450:text-xs">
               Return
             </button>
           </a>

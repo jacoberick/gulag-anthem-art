@@ -5,9 +5,9 @@ const Home = ({ setGlobalArtID }) => {
     <div id="homeContainer" className="">
       <div
         id="home"
-        className="flex max-w-screen-2xl mx-auto px-14 pb-14 bFour:flex-col bFour:items-center bFour:px-7 bFour:pb-7"
+        className="flex max-w-screen-2xl mx-auto px-14 pb-14 b600:flex-col b600:items-center b600:px-7 b600:pb-7"
       >
-        <div id="left" className="w-1/2 bFour:w-full">
+        <div id="left" className="w-1/2 b600:w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
             <g>
               <path
@@ -462,12 +462,12 @@ const Home = ({ setGlobalArtID }) => {
         </div>
         <div
           id="right"
-          className="w-1/2 flex flex-col justify-center items-center bg-black bFour:w-full bFour:py-4"
+          className="w-1/2 flex flex-col justify-center items-center bg-black b600:w-full b600:py-4"
         >
-          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white bOne:text-3xl bThree:text-2xl bSix:text-xl">
+          <h1 className="text-4xl font-jSans leading-snug px-4 uppercase text-white b1000:text-3xl b750:text-2xl b300:text-xl">
             gulag anthem
           </h1>
-          <h2 className="font-zen uppercase text-white mb-3 text-lg bOne:text-base bThree:text-sm bTwo:mt-1">
+          <h2 className="font-zen uppercase text-white mb-3 text-lg b1000:text-base b750:text-sm b902:mt-1">
             digital art
           </h2>
           <IconLinks />

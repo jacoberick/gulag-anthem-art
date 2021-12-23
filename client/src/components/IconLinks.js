@@ -17,8 +17,8 @@ const IconLinks = () => {
     regulatedBPoints = "";
     regulatedSVG = "";
   } else if (location.pathname === "/") {
-    regulatedBPoints = "bOne:text-xl bThree:text-lg bFour:text-xl";
-    regulatedSVG = "bOne:h-5";
+    regulatedBPoints = "b1000:text-xl b750:text-lg b600:text-xl";
+    regulatedSVG = "b1000:h-5";
   }
 
   return (

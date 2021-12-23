@@ -40,9 +40,9 @@ const MadeWithCode = () => {
 
   return (
     <div id="codeContainer" className="text-black">
-      <div id="codeInner" className="max-w-screen-2xl px-14 mx-auto bFour:px-7">
-        <h1 className="pt-12 text-4xl bOne:text-3xl uppercase bThree:text-2xl">
-          generative projects
+      <div id="codeInner" className="max-w-screen-2xl px-14 mx-auto b600:px-7">
+        <h1 className="pt-12 text-4xl b1000:text-3xl uppercase b750:text-2xl">
+          created with code
         </h1>
         <hr className="border-t-2 border-black" />
         <div id="projectsContainer" className="">
@@ -64,7 +64,7 @@ const MadeWithCode = () => {
                   alt={x.name}
                   className="transform scale-125"
                 />
-                <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl duration-75 whitespace-nowrap pointer-events-none">
+                <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-zen text-5xl b750:text-4xl b450:text-3xl duration-75 whitespace-nowrap pointer-events-none">
                   {x.name}
                 </p>
               </a>

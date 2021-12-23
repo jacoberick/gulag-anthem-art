@@ -4,17 +4,17 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const linkClass =
-  "uppercase text-base hover:text-trainBlue transition bOne:text-sm font-zen ml-8";
+  "uppercase text-base hover:text-trainBlue transition b1000:text-sm font-zen ml-8";
 
 const mobileLinkClass = "uppercase font-zen text-3xl mb-8";
 
 const desktopNav = (
-  <nav className="bFour:hidden">
+  <nav className="b600:hidden">
     <a className={linkClass} href="/#artContainer">
       art
     </a>
     <a className={linkClass} href="/#artContainer">
-      generative projects
+      code
     </a>
     <a
       rel="noreferrer"
@@ -44,7 +44,7 @@ const Header = () => {
   const mobileNav = (
     <div
       id="mobileNavContainer"
-      className={`transition-all hidden bFour:block bg-trainBlueOpacity text-white h-screenMinusHeader w-3/4 absolute ${
+      className={`transition-all hidden b600:block bg-trainBlueOpacity text-white h-screenMinusHeader w-3/4 absolute ${
         activeBurger ? "right-0" : "right-full"
       } z-10 p-5`}
     >
@@ -61,7 +61,7 @@ const Header = () => {
           className={mobileLinkClass}
           href="/#artContainer"
         >
-          generative projects
+          code
         </a>
         <a
           onClick={handleBurgerClick}
@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <div id="HeaderContainer">
-      <header className="px-14 bFour:px-7 py-3 max-w-screen-2xl mx-auto flex items-center justify-between">
+      <header className="px-14 b600:px-7 py-3 max-w-screen-2xl mx-auto flex items-center justify-between">
         <Link to="/">
           <p className="uppercase font-jSans text-2xl">ga</p>
         </Link>
@@ -93,7 +93,7 @@ const Header = () => {
         <button
           id="burgerButton"
           onClick={handleBurgerClick}
-          className="hidden bFour:block transform transition"
+          className="hidden b600:block transform transition"
         >
           <FontAwesomeIcon className="text-3xl text-black" icon={faBars} />
         </button>

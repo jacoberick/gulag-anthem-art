@@ -8,14 +8,14 @@ module.exports = {
     },
     extend: {
       screens: {
-        bOne: { max: "1000px" },
-        bTwo: { max: "902px" },
-        bThree: { max: "750px" },
-        bFour: { max: "600px" },
-        bFive: { max: "500px" },
-        bFivePFive: { max: "450px" },
-        bFourSevenFive: { max: "350px" },
-        bSix: { max: "300px" },
+        b1000: { max: "1000px" },
+        b902: { max: "902px" },
+        b750: { max: "750px" },
+        b600: { max: "600px" },
+        b500: { max: "500px" },
+        b450: { max: "450px" },
+        b350: { max: "350px" },
+        b300: { max: "300px" },
       },
       height: {
         screenMinusHeader: "calc(100vh - 56px)",

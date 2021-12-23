@@ -1,7 +1,7 @@
 import IconLinks from "./IconLinks";
 
 const buttonClass =
-  "text-black font-zen bg-white px-32 py-2 bFivePFive:px-20 rounded block text-center mb-6 bFivePFive:text-sm bFourSevenFive:px-12";
+  "text-black font-zen bg-white px-32 py-2 b450:px-20 rounded block text-center mb-6 b450:text-sm b350:px-12";
 
 // button info for mapping
 let infoArr = [
@@ -18,7 +18,7 @@ const TreeLink = (props) => {
       className="h-screen bg-black flex justify-center "
     >
       <div id="linkContainer" className="flex flex-col items-center p-5">
-        <h1 className="text-white uppercase text-3xl bFivePFive:text-2xl">
+        <h1 className="text-white uppercase text-3xl b450:text-2xl">
           gulag anthem
         </h1>
         <hr className="border-t-2 border-white mb-8 w-full" />
