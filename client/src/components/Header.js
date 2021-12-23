@@ -8,30 +8,30 @@ const linkClass =
 
 const mobileLinkClass = "uppercase font-zen text-3xl mb-8";
 
-const desktopNav = (
-  <nav className="b600:hidden">
-    <a className={linkClass} href="/#artContainer">
-      art
-    </a>
-    <a className={linkClass} href="/#artContainer">
-      code
-    </a>
-    <a
-      rel="noreferrer"
-      className={`${linkClass}`}
-      href="https://www.etsy.com/shop/GulagAnthem"
-      target="_blank"
-    >
-      shop
-    </a>
-    <Link className={linkClass} to="/contact">
-      contact
-    </Link>
-  </nav>
-);
-
 const Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
+
+  const desktopNav = (
+    <nav className="b600:hidden">
+      <a className={linkClass} href="/#artContainer">
+        art
+      </a>
+      <a className={linkClass} href="/#codeContainer">
+        code
+      </a>
+      <a
+        rel="noreferrer"
+        className={`${linkClass}`}
+        href="https://www.etsy.com/shop/GulagAnthem"
+        target="_blank"
+      >
+        shop
+      </a>
+      <Link className={linkClass} to="/contact">
+        contact
+      </Link>
+    </nav>
+  );
 
   const handleBurgerClick = () => {
     document.getElementById("burgerButton").classList.toggle("-rotate-90");
@@ -59,7 +59,7 @@ const Header = () => {
         <a
           onClick={handleBurgerClick}
           className={mobileLinkClass}
-          href="/#artContainer"
+          href="/#codeContainer"
         >
           code
         </a>
