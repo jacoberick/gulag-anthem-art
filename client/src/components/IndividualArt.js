@@ -25,7 +25,7 @@ const IndividualArt = ({ artID }) => {
         className="flex justify-center max-w-screen-2xl b902:flex-col b902:items-center"
       >
         <img
-          className="w-1/2 mr-12 b902:mr-0 b902:w-4/5"
+          className="w-1/3 mr-12 b902:mr-0 b902:w-4/5"
           src={asset.jpg}
           alt=""
         />
